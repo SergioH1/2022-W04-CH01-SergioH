@@ -1,10 +1,11 @@
 import { ArrayFamous } from './Array';
+// import { Button } from './button';
 export function Gentleman() {
   return (
     <>
       <ul className="gentlemen">
         {ArrayFamous.map((item) => (
-          <li className="gentleman">
+          <li key={item.name} className="gentleman">
             <div className="gentleman__avatar-container">
               <img
                 className="gentleman__avatar"
@@ -18,22 +19,22 @@ export function Gentleman() {
             <div className="gentleman__data-container">
               <h2 className="gentleman__name">{item.name}</h2>
               <ul className="gentleman__data-list">
-                <li className="gentleman__data">
+                <li key={item.profession} className="gentleman__data">
                   <span className="gentleman__data-label">Profession:</span>
                   {item.profession}
                 </li>
-                <li className="gentleman__data">
+                <li key={item.status} className="gentleman__data">
                   <span className="gentleman__data-label">Status:</span>{' '}
                   {item.status}
                 </li>
-                <li className="gentleman__data">
+                <li key={item.twitter} className="gentleman__data">
                   <span className="gentleman__data-label">Twitter:</span>
                   {item.twitter}
                 </li>
               </ul>
+              <i className="icon gentleman__icon fas fa-check"></i>
+              <i className="icon gentleman__icon gentleman__icon--delete fas fa-times"></i>
             </div>
-            <i className="icon gentleman__icon fas fa-check"></i>
-            <i className="icon gentleman__icon gentleman__icon--delete fas fa-times"></i>
           </li>
         ))}
         ;

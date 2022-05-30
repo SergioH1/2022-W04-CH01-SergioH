@@ -11,7 +11,7 @@
 body {
   margin: 0;
   color: var(--text-color);
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 ul,
 li {
@@ -129,6 +129,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .gentleman.selected .gentleman__avatar,
 .gentleman:hover .gentleman__avatar {
